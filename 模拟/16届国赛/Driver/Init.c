@@ -1,0 +1,12 @@
+#include "Init.h"
+
+void Sys_Init(void)
+{
+	P0=0xff;
+	P2 = P2 & 0x1f | 0x80;
+	P2 &= 0x1f;
+	
+	P0=0x00;
+	P2 = P2 & 0x1f | 0xA0;
+	P2 &= 0x1f;	
+}
